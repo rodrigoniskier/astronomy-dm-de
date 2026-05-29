@@ -13,6 +13,8 @@ const withMDX = nextMDX({
 
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  output: 'export',
+  distDir: 'dist',
 }
 
 export default withMDX(nextConfig)
