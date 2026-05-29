@@ -1,0 +1,6 @@
+{
+  "name": "Astronomy DM-DE Portal",
+  "description": "Understanding Dark Matter, Dark Energy, and the Structure of the Dark Universe",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

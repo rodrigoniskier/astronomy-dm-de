@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import 'katex/dist/katex.min.css';
+
+@theme {
+  --color-background: #0d0d0d;
+  --color-foreground: #f8fafc;
+  --color-primary: #2563eb;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #0a0a0a;
+  --color-secondary-foreground: #f8fafc;
+  --color-accent: #3b82f6;
+  --color-accent-foreground: #ffffff;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-[#0d0d0d] text-foreground font-sans antialiased text-slate-300 selection:bg-blue-600/30 selection:text-white flex flex-col;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-white font-light;
+  }
+
+  p {
+    @apply leading-relaxed text-slate-400;
+  }
+}
+
+.math-display {
+  @apply overflow-x-auto py-4;
+}
+
+.math-inline {
+  @apply text-blue-400;
+}
