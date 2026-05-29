@@ -1,8 +1,9 @@
+"use client"
 import React from 'react';
-import { Equation, LevelContent, MarkdownBlock } from '../components/science/ScienceComponents';
+import { Equation, LevelContent, MarkdownBlock } from '@/src/components/science/ScienceComponents';
 import { motion } from 'motion/react';
 
-export function TheModel() {
+export default function TheModel() {
   return (
     <div className="container mx-auto px-6 py-12 max-w-3xl">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-12">
@@ -82,7 +83,7 @@ This acts as a *selection heuristic*. To avoid ghosts (particles with negative e
           <h2 className="text-2xl font-semibold text-white mb-6 border-b border-slate-800 pb-3">3. The Unified Dark Sector Lagrangian</h2>
           
           <p className="text-slate-400 mb-6 leading-relaxed">
-            The minimal choice that respects these thermodynamic constraints is a model with a local $\mathrm{SU}(2)_D$ gauge symmetry and a global $\mathrm{U}(1)_{PQ}$ symmetry. The dark sector is governed by this Lagrangian:
+            The minimal choice that respects these thermodynamic constraints is a model with a local SU(2)_D gauge symmetry and a global U(1)_PQ symmetry. The dark sector is governed by this Lagrangian:
           </p>
 
           <Equation 
@@ -155,7 +156,7 @@ The equation of state parameter, $w$, tells us what the dominant energy in the u
           />
 
           <p className="mt-6 text-slate-400">
-            For typical parameters, the model predicts the effective equation of state smoothly crosses from $w \\approx 0$ to $w \\approx -1$ at a redshift of $z_c \\sim 0.8$.
+            For typical parameters, the model predicts the effective equation of state smoothly crosses from w ~ 0 to w ~ -1 at a redshift of z_c ~ 0.8.
           </p>
         </section>
 

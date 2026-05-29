@@ -1,8 +1,8 @@
+"use client"
 import React from 'react';
-import { Equation } from '../components/science/ScienceComponents';
-import { motion } from 'motion/react';
+import { Equation } from '@/src/components/science/ScienceComponents';
 
-export function Equations() {
+export default function Equations() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
       <div className="mb-12">
@@ -12,7 +12,7 @@ export function Equations() {
 
       <div className="space-y-12">
         <section>
-          <h2 className="text-xl font-semibold text-accent mb-4">Thermodynamic Principle</h2>
+          <h2 className="text-xl font-semibold text-blue-500 mb-4">Thermodynamic Principle</h2>
           <Equation 
             math="\mathcal{L}_{\mathrm{dark}} = -s_{\mathrm{dark}} + \sum_A \frac{\partial s_{\mathrm{dark}}}{\partial(\partial_0\Phi^A)} \partial_0\Phi^A"
             data={{
@@ -29,7 +29,7 @@ export function Equations() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-accent mb-4">The Unified Lagrangian</h2>
+          <h2 className="text-xl font-semibold text-blue-500 mb-4">The Unified Lagrangian</h2>
           <Equation 
             math="\mathcal{L}_{\mathrm{dark}} = -\frac{1}{4} F^a_{\mu\nu} F^{a\mu\nu} + (D_\mu\Phi)^\dagger(D^\mu\Phi) + \partial_\mu S^* \partial^\mu S - V(\Phi, S)"
             data={{
@@ -47,7 +47,7 @@ export function Equations() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-accent mb-4">Scalar Potential Breakdown</h2>
+          <h2 className="text-xl font-semibold text-blue-500 mb-4">Scalar Potential Breakdown</h2>
           <Equation 
             math="V(\Phi, S) = \frac{\lambda_\Phi}{4} \left( |\Phi|^2 - \frac{v_\Phi^2}{2} \right)^2 + \frac{\lambda_S}{4} \left( |S|^2 - \frac{v_S^2}{2} \right)^2 + V_0 + \mu^4 \left[ 1 - \cos \left( \frac{\theta}{f} \right) \right]"
             data={{

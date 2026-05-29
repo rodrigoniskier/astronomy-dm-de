@@ -1,0 +1,8 @@
+export default function PlaceholderPage() {
+  return (
+    <div className="container mx-auto px-4 py-24 text-center">
+      <h2 className="text-3xl font-display font-bold text-white mb-4">Under Construction</h2>
+      <p className="text-slate-400 max-w-lg mx-auto">This section is currently being expanded.</p>
+    </div>
+  );
+}

@@ -1,7 +1,7 @@
+"use client"
 import React from 'react';
-import { motion } from 'motion/react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
-import { useLearningLevel } from '../context/LearningLevelContext';
+import { useLearningLevel } from '@/src/context/LearningLevelContext';
 
 // Simulated data based on the paper's integration curves
 const data = Array.from({ length: 100 }, (_, i) => {
@@ -28,7 +28,7 @@ const data = Array.from({ length: 100 }, (_, i) => {
   };
 }).reverse();
 
-export function Predictions() {
+export default function Predictions() {
   const { level } = useLearningLevel();
 
   return (
@@ -42,7 +42,7 @@ export function Predictions() {
         
         {/* W(Z) Crossover Graph */}
         <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
-          <h2 className="text-xl font-bold text-white mb-2">The <span className="font-mono text-accent">w(z)</span> Crossover</h2>
+          <h2 className="text-xl font-bold text-white mb-2">The <span className="font-mono text-blue-400">w(z)</span> Crossover</h2>
           <p className="text-slate-400 text-sm mb-6 h-12">
             {level === 'Beginner' && "The 'push' of dark energy isn't constant; it turns on around redshift $z \\sim 0.8$."}
             {level === 'Student' && "The equation of state parameter transitions smoothly from $w\\approx0$ to $w\\approx-1$ as the scalar field thaws."}
@@ -70,7 +70,7 @@ export function Predictions() {
                 />
                 <Legend verticalAlign="top" height={36} />
                 <Line type="monotone" dataKey="w_model" name="Astronomy DM-DE" stroke="#8b5cf6" strokeWidth={3} dot={false} />
-                <Line type="dashed" dataKey="w_lcdm" name="Standard ΛCDM" stroke="#c0caf5" strokeDasharray="5 5" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="w_lcdm" name="Standard ΛCDM" stroke="#c0caf5" strokeDasharray="5 5" strokeWidth={2} dot={false} />
               </LineChart>
             </ResponsiveContainer>
           </div>
@@ -117,7 +117,7 @@ export function Predictions() {
           Because the dark matter vector bosons self-interact through their non-Abelian gauge force, they transfer momentum. This leads to a cutoff in structural formation at small scales. 
         </p>
         <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 font-mono text-emerald-400">
-          Target suppression scale: $k_* \approx 1.2 h \mathrm{Mpc}^{-1}$
+          Target suppression scale: k_* ≈ 1.2 h Mpc^-1
         </div>
       </div>
     </div>

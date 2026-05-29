@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Info, X, BookOpen, GraduationCap, Microscope } from 'lucide-react';
@@ -121,7 +122,7 @@ export function ExplainerProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Equation({ math, data, inline = false }: { math: string, data: ExplainerData, inline?: boolean }) {
+export function Equation({ math, data, inline = false }: { math: string, data: Omit<ExplainerData, 'math'>, inline?: boolean }) {
   const { openExplainer } = React.useContext(ExplainerContext);
   
   return (

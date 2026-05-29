@@ -1,10 +1,11 @@
+"use client"
 import React from 'react';
 import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Sparkles, BookOpen, Atom, Library } from 'lucide-react';
-import { LevelContent, MarkdownBlock } from '../components/science/ScienceComponents';
+import { LevelContent, MarkdownBlock } from '@/src/components/science/ScienceComponents';
 
-export function Home() {
+export default function Home() {
   return (
     <div className="flex flex-col min-h-full">
       <section className="relative pt-24 pb-32 overflow-hidden flex-1 flex flex-col justify-center">
@@ -58,14 +59,14 @@ export function Home() {
             className="flex flex-col sm:flex-row items-center gap-4"
           >
             <Link 
-              to="/the-model" 
+              href="/the-model" 
               className="px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded font-bold transition-colors flex items-center gap-2 w-full sm:w-auto justify-center text-sm tracking-wide"
             >
               Explore the Model
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link 
-              to="/foundations" 
+              href="/foundations" 
               className="px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white rounded font-medium transition-colors flex items-center gap-2 w-full sm:w-auto justify-center border border-slate-700 text-sm tracking-wide"
             >
               <BookOpen className="w-4 h-4 text-slate-400" />
